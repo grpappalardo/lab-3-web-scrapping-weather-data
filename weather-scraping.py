@@ -34,11 +34,11 @@ soup=BeautifulSoup(page.content,"html.parser")
 # Locate element on page to be scraped
 # This element is located within an id tag called current_conditions_detail
 # find() locates the element in the BeautifulSoup object
-cur_conditions_detail = soup.find(id="current_conditions_detail") # edited from here forward to scrape weather details
+current_conditions_detail = soup.find(id="current_conditions_detail") # edited from here forward to scrape weather details
 
 # Extract text from the selected BeautifulSoup object using .text
-cur_conditions_detail = cur_conditions_detail.text
+current_conditions_detail = current_conditions_detail.text
 
 # Final Output
 # Return scraped information
-print('The Current Weather Conditions at '+ lat +  ", " + lon + " are:" + cur_conditions_detail) 
+print('The Current Weather Conditions at '+ lat +  ", " + lon + " are:" + current_conditions_detail) 
